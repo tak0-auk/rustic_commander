@@ -1,7 +1,0 @@
-[package]
-name = "rcp"
-version = "0.1.0"
-authors = ["takashima <tak0auk@gmail.com>"]
-
-[dependencies]
-getopts ="*"
