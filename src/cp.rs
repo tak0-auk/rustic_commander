@@ -2,10 +2,6 @@ const DOC: &'static str =
 "rcp
 ";
 
-extern crate getopts;
-
-use getopts::Options;
-
 use std::env;
 use std::error::Error;
 use std::fs::{ File, OpenOptions };
@@ -19,7 +15,7 @@ use std::process;
 fn main() {
     let args: Vec<String> = env::args().collect();
 
-    parse_args();
+    // parse_args();
 
     if args.len() == 1 {
         print!("{}", DOC);
@@ -57,25 +53,25 @@ fn main() {
     };
 }
 
-fn parse_args() {
-    let args: Vec<String> = env::args().collect();
+// fn parse_args() {
+//     let args: Vec<String> = env::args().collect();
 
-    let mut opts = Options::new();
+//     let mut opts = Options::new();
 
-    opts.optopt("f", "", "", "hint");
+//     opts.optopt("f", "", "", "hint");
 
-    opts.optflag("h", "help", "print this help menu");
+//     opts.optflag("h", "help", "print this help menu");
 
-    let matches = match opts.parse(&args[1..]) {
-        Ok(m) => { m }
-        Err(f) => { panic!(f.to_string())}
-    };
+//     let matches = match opts.parse(&args[1..]) {
+//         Ok(m) => { m }
+//         Err(f) => { panic!(f.to_string())}
+//     };
 
-    if matches.opt_present("h"){
-        print!("-h");
-    }
+//     if matches.opt_present("h"){
+//         print!("-h");
+//     }
 
-}
+// }
 
 // fn open_file(name: &str) -> result::Result<File, io::Error> {
 //     OpenOptions::new().read(true).open(name)
