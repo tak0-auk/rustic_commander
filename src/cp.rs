@@ -1,5 +1,5 @@
 const DOC: &'static str =
-"rcp
+"cp
 ";
 
 use std::env;

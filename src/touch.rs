@@ -19,7 +19,7 @@ fn main() {
         println!("{}", DOC);
     }
     for _path in paths {
-        touch(&Path::new("e.txt")).unwrap_or_else(|why| {
+        touch(&Path::new(&_path)).unwrap_or_else(|why| {
             println!("! {:?}", why.kind());
         });
     }
